@@ -1,0 +1,140 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.icon-circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #e2e8f0; /* Light gray for light mode */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-circle:hover {
+  background-color: #cbd5e1; /* Slightly darker on hover */
+}
+
+
+
+.Theme-btn{
+  font-size: 1.5rem;
+  color: inherit;
+  transition: transform 0.2s ease, color 0.2s ease;
+    
+}
+.Theme-btn:hover {
+  transform: scale(1.1);
+}
+[data-bs-theme="light"] .icon-circle .Theme-btn {
+  color: #1a1a1a;
+}
+
+/* Dark mode */
+[data-bs-theme="dark"] .icon-circle .Theme-btn {
+  color: black;
+  
+   /* Soft gray instead of white */
+}
+
+[data-bs-theme="dark"] .icon-circle .Theme-btn:hover {
+  color: #dee2e6;
+}
+.carousel-wrapper {
+  width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    
+  }
+  .carousel-item:hover .carousel-image {
+    transform: scale(1.02);
+  }
+
+  .sidebar {
+    min-height: 100%;
+  }
+  
+  /* Optional: Spacing on mobile */
+  @media (max-width: 767px) {
+    .sidebar {
+      margin-bottom: 1rem;
+    }
+
+    .mobile-menu-btn {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+  }
+
+  .footer-logo {
+    font-size: 1.2rem; /* Reduce font size */
+    font-weight: bold;
+    
+    margin-bottom: 4px; /* Reduce spacing */
+  }
+  
+  .footer-heading {
+    font-size: 1rem; /* Smaller heading */
+    font-weight: 600;
+    margin-bottom: 4px; /* Reduce space */
+    
+  }
+  
+  .footer-link {
+    
+    font-size: 0.9rem; /* Smaller font size */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 2px 0; /* Reduce spacing */
+  }
+  
+  .footer-link:hover {
+    
+    text-decoration: underline;
+  }
+  
+  /* Footer Bottom Links */
+  .footer-bottom {
+    font-size: 0.8rem; /* Reduce text size */
+    padding-top: 8px; /* Reduce space */
+    margin-top: 8px;
+  }
+  
+  .footer-bottom-links .footer-link {
+    font-size: 0.8rem; /* Smaller font */
+    padding: 0 5px; /* Reduce spacing */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-logo {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  
+    .footer-heading {
+      text-align: center;
+    }
+  
+    .footer-link {
+      text-align: center;
+    }
+  }
