@@ -41,21 +41,23 @@ const GameDetail = () => {
       }
     };
 
+    const fetchScreenshots = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.rawg.io/api/games/${id}/screenshots?key=${API_KEY}`
+        );
+        setScreenshots(res.data.results);
+      } catch (err) {
+        console.error("Error fetching screenshots:", err);
+      }
+    };
+  
+    fetchScreenshots();
+
     fetchGameDetails();
   }, [id, API_KEY]);
 
-  const fetchScreenshots = async () => {
-    try {
-      const res = await axios.get(
-        `https://api.rawg.io/api/games/${id}/screenshots?key=${API_KEY}`
-      );
-      setScreenshots(res.data.results);
-    } catch (err) {
-      console.error("Error fetching screenshots:", err);
-    }
-  };
-
-  fetchScreenshots();
+  
 
   if (loading) {
     return (
