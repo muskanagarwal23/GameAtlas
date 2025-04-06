@@ -1,6 +1,9 @@
 # React + Vite
 
-# DEPLOYMENT LINK :-  
+# DEPLOYMENT LINKS :-
+Main :- https://vercel.com/muskan-agarwals-projects/game-atlas  
+
+Branch :- https://game-atlas.vercel.app/
 
 # AUTHOR :- MUSKAN AGARWAL
         - Email: muskaanagarwal2591@gmail.com
