@@ -37,7 +37,11 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/game/:id" element={<GameDetail />} />
-              <Route path="/library" element={<Library />} />
+              <Route path="/library" element={
+                <ProtectedRoute>
+                <Library />
+                </ProtectedRoute>
+                } />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>

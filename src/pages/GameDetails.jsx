@@ -11,6 +11,11 @@ import {
   Badge,
   Card,
 } from "react-bootstrap";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import CategoryIcon from "@mui/icons-material/Category";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 
 const GameDetail = () => {
   const { id } = useParams();
@@ -84,7 +89,7 @@ const GameDetail = () => {
             />
           </Col>
           <Col md={7}>
-            <h2 className="text-center fw-bold mb-3">{game.name}</h2>
+            <h2 className="text-center fw-bold mb-3 custom-card-title">{game.name}</h2>
 
             <div
               className="mb-3 text-muted"
@@ -93,7 +98,9 @@ const GameDetail = () => {
               }}
             />
 
-            <h5 className="mt-4">🎮 Platforms</h5>
+            <h5 className="mt-4" style={{ color: "#4c37be" }}>
+              <SportsEsportsIcon /> Platforms
+            </h5>
             <div className="mb-2">
               {game.platforms.map((p) => (
                 <Badge key={p.platform.id} className="me-2 mb-1 badge-plain">
@@ -102,7 +109,9 @@ const GameDetail = () => {
               ))}
             </div>
 
-            <h5 className="mt-3">🧬 Genres</h5>
+            <h5 className="mt-3" style={{ color: "#4c37be" }}>
+              <CategoryIcon /> Genres
+            </h5>
             <div className="mb-2">
               {game.genres.map((g) => (
                 <Badge key={g.id} bg="info" className="me-2 mb-1 badge-plain">
@@ -111,12 +120,12 @@ const GameDetail = () => {
               ))}
             </div>
 
-            <h5 className="mt-3">
-              📅 Released:{" "}
+            <h5 className="mt-3" style={{ color: "#4c37be" }}>
+              <CalendarMonthIcon /> Released:{" "}
               <span className="text-secondary">{game.released}</span>
             </h5>
 
-            <h5 className="mt-3">
+            <h5 className="mt-3" style={{ color: "#4c37be" }}>
               ⭐ Rating:{" "}
               <Badge bg="success" className="ms-1">
                 {game.rating}
@@ -124,8 +133,8 @@ const GameDetail = () => {
             </h5>
 
             {game.metacritic && (
-              <h5 className="mt-3">
-                🧪 Metacritic:{" "}
+              <h5 className="mt-3" style={{ color: "#4c37be" }}>
+                <ReviewsIcon /> Metacritic:{" "}
                 <Badge bg="warning" className="ms-1">
                   {game.metacritic}
                 </Badge>
@@ -137,7 +146,9 @@ const GameDetail = () => {
 
       {screenshots.length > 0 && (
         <div className="mt-5">
-          <h4 className="mb-3">📸 Screenshots</h4>
+          <h4 className="mb-3" style={{ color: "#4c37be" }}>
+            <PhotoCameraIcon /> Screenshots
+          </h4>
           <div className="d-flex flex-wrap gap-3">
             {screenshots.map((screenshot) => (
               <img

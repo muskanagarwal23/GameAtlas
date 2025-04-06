@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button, Badge } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite, removeFavorite } from "../store/slices/FavourateSlice";
+import { addFavorite, removeFavorite } from "../store/slices/BookmarkSlice";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
@@ -34,7 +34,7 @@ const GameCard = ({ game }) => {
       <Card.Body>
         <div className="d-flex align-items-start justify-content-between mb-2">
           <div className="flex-grow-1 text-center">
-            <Card.Title className="card-title">{game.name}</Card.Title>
+            <Card.Title className="custom-card-title">{game.name}</Card.Title>
           </div>
 
           <Button variant="link" onClick={handleFavorite} className="p-1">

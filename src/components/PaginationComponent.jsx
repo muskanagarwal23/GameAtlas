@@ -30,7 +30,7 @@ const PaginationComponent = ({ totalCount, pageSize }) => {
       >
         <KeyboardDoubleArrowLeftIcon />
       </button>
-      ....
+      .....
       <button
         onClick={handleNext}
         disabled={currentPage === totalPages}

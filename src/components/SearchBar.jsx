@@ -9,11 +9,11 @@ const SearchBar = () => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    const debounceTimer = setTimeout(() => {
+    const Timer = setTimeout(() => {
       dispatch(setSearchQuery(query));
     }, 500);
 
-    return () => clearTimeout(debounceTimer);
+    return () => clearTimeout(Timer);
   }, [query, dispatch]);
 
   return (

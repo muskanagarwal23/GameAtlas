@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import favoritesReducer from "./slices/FavourateSlice"; 
+import BookmarkReducer from "./slices/BookmarkSlice"; 
 import gameReducer from "./slices/gameSlice";
 import filterReducer from "./slices/filterSlice";
 
 const loadFavorites = () => {
     try {
-        const serializedState = localStorage.getItem("favorites");
-        return serializedState ? JSON.parse(serializedState) : [];
+        const markedState = localStorage.getItem("favorites");
+        return markedState ? JSON.parse(markedState) : [];
     } catch (error) {
         console.error("Error loading favorites:", error);
         return [];
@@ -15,8 +15,8 @@ const loadFavorites = () => {
 
 const saveFavorites = (favorites) => {
     try {
-        const serializedState = JSON.stringify(favorites);
-        localStorage.setItem("favorites", serializedState);
+        const markedState = JSON.stringify(favorites);
+        localStorage.setItem("favorites", markedState);
     } catch (error) {
         console.error("Error saving favorites:", error);
     }
@@ -24,7 +24,7 @@ const saveFavorites = (favorites) => {
 
 export const store = configureStore({
     reducer: {
-        favorites: favoritesReducer,
+        favorites: BookmarkReducer,
         games: gameReducer,
         filters: filterReducer,
     },

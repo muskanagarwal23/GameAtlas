@@ -43,7 +43,7 @@
 .game-card {
   margin: 1rem;
   border-radius: 12px;
-  box-shadow: 0 6px 20px ;
+  box-shadow: 0 6px 8px ;
   transition: transform 0.2s ease-in-out,box-shadow 0.2s ease-in-out;
   overflow: hidden;
 }
@@ -72,10 +72,11 @@
   padding: 1rem;
 }
 
-.card-title{
+.custom-card-title{
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
+  
 }
 
 .card-btn {
